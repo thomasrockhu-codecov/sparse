@@ -49,7 +49,7 @@ jobs:
           pip install -e '.[tests]'
       - name: Run tests
         run: ci/test_backends.sh
-      - uses: codecov/codecov-action@v5
+      - uses: codecov/codecov-action@glob-test
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
